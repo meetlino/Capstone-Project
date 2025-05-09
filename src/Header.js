@@ -1,18 +1,19 @@
-function Header(){
-    return (
-    <>
-    <nav>
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Menu</li>
-            <li>Reservations</li>
-            <li>Order Online</li>
-            <li>Login</li>
-        </ul>
-    </nav>
-    </>
-    );
+import React from 'react'
+import logo from './littlelemon_logo.png'
+import Nav from './Nav'
+import { Link } from 'react-router-dom'
+
+const Header = () => {
+  return (
+    <header>
+      <div className='header-wrapper'>
+        <Link to="/">
+          <img src={logo} alt="Logo" width={250} height={80}/>
+        </Link>
+        <Nav/>
+      </div>
+    </header>
+  )
 }
 
-export default Header;
+export default Header
